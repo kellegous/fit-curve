@@ -1,6 +1,7 @@
 import { Vec } from "./vec";
 import { bezier } from "./bezier";
 
+// TODO(knorton): iterations should be a part of the options that are passed in.
 const MaxIterations = 20;
 
 export type Bezier = [Vec, Vec, Vec, Vec];

@@ -3,6 +3,13 @@ import { Vec } from "./vec";
 
 type Projection = (v: Vec) => Vec;
 
+/**
+ * Create a function that projects points proportionally from one rectangle to another.
+ * 
+ * @param Rect fr 
+ * @param Rect to 
+ * @returns Projection
+ */
 export function project(
 	fr: Rect,
 	to: Rect,
