@@ -61,6 +61,10 @@ export class Iter<T> implements Iterable<T>{
 		return this;
 	}
 
+	count(): number {
+		return this.reduce((c) => c + 1, 0);
+	}
+
 	reduce<V>(
 		fn: (v: V, t: T, i?: number) => V,
 		val: V,

@@ -10,7 +10,7 @@ export async function testUsing(
 	el: HTMLElement,
 	url: string,
 	fn: (pts: Vec[], error: number) => Bezier[],
-): Promise<any> {
+): Promise<TestResult[]> {
 	const { fit: data } = await fetch(url)
 		.then((res) => res.json()) as { fit: RawTest[] };
 
@@ -113,7 +113,7 @@ function vecsAreSame(
 	return d.i < episilon && d.j < episilon;
 }
 
-class TestResult {
+export class TestResult {
 	private issues: string[] = [];
 
 	constructor(
